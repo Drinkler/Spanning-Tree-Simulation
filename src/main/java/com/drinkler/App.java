@@ -7,11 +7,14 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 
 public final class App {
 
     static int MAX_ITEMS = 100; // The input file can have a max of MAX_ITEMS lines
     static int MAX_IDENT = 100; // Max length of the node identifier/name
+
+    static ArrayList<Node> nodes = new ArrayList<Node>();
 
     static int[][] kantengewichte = new int[6][6];
 
@@ -60,11 +63,11 @@ public final class App {
             String regex = "[A-Z][A-Z,0-9]{0," + (MAX_IDENT - 1) + "}";
             // Edges
             if (lineSplitted[0].matches(regex) && lineSplitted[1].matches("-") && lineSplitted[2].matches(regex)) {
-                // TODO: Save value and edge in class
+                getNodeById(getNodeIdWithName(lineSplitted[0])).setLink(lineSplitted[2], value);
             }
             // Nodes
             else if (lineSplitted[0].matches(regex)) {
-                // TODO: Save value and node name in node class
+                nodes.add(new Node(value, lineSplitted[0]));
             } else {
                 System.err.println("Falsch formatierte Knotenbezeichner oder Überschreitung der Maximallänge von "
                         + MAX_IDENT + "!");
@@ -72,6 +75,29 @@ public final class App {
             }
         }
         br.close();
+
+    }
+
+    public static Node getNodeById(int id) {
+        Node node = null;
+        for (Node tempNode : nodes) {
+            if (tempNode.getId() == id) {
+                node = tempNode;
+                break;
+            }
+        }
+        return node;
+    }
+
+    public static int getNodeIdWithName(String name) {
+        int id = 0;
+        for (Node node : nodes) {
+            if (node.getName().equals(name)) {
+                id = node.getId();
+                break;
+            }
+        }
+        return id;
     }
 
     /*

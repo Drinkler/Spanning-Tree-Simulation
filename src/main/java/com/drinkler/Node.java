@@ -1,18 +1,15 @@
 package com.drinkler;
 
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 public class Node {
 
-    private String name;
     private int id;
+    private String name;
+    private int weight;
 
-    private Map<String, Integer> links = new LinkedHashMap<String, Integer>();
-
-    public Node(int id, String name) {
+    public Node(int id, String name, int weight) {
         this.id = id;
         this.name = name;
+        this.weight = weight;
     }
 
     public int getId() {
@@ -31,12 +28,12 @@ public class Node {
         this.name = name;
     }
 
-    public Map<String, Integer> getLinks() {
-        return links;
+    public int getWeight() {
+        return weight;
     }
 
-    public void setLink(String name, int cost) {
-        links.put(name, cost);
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
 }

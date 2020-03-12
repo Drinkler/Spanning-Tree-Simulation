@@ -4,10 +4,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public final class App {
 
     static public Graph graph;
+
+    static private int MAX_ITEMS = 100; // The input file can have a max of MAX_ITEMS lines
+    static private int MAX_IDENT = 100; // Max length of the node identifier/name
 
     public static void main(String[] args) {
         try {
@@ -18,6 +24,9 @@ public final class App {
     }
 
     public static void readFile(String filename) throws IOException {
+
+        checkMaxLinesInFile(filename);
+
         File file = new File("res/" + filename);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
@@ -56,6 +65,14 @@ public final class App {
         br.close();
 
         graph.writeKeysWithLinks();
+    }
+
+    static private void checkMaxLinesInFile(String filename) throws IOException {
+        Path path = Paths.get("res/" + filename);
+        if (Files.lines(path).count() > MAX_ITEMS) {
+            System.err.println("The input file exceeds " + MAX_ITEMS + " of lines!");
+            System.exit(2);
+        }
     }
 
 }

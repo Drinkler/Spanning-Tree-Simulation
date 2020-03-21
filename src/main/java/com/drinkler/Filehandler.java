@@ -38,7 +38,7 @@ public class Filehandler {
             // Add Nodes
             else if (line.contains("=")) {
                 tmpGraph.createNewNode(Integer.parseInt(splittedLine[2], 0, splittedLine[2].length() - 1, 10),
-                        splittedLine[0], 0);
+                        splittedLine[0]);
             }
             // Skip comments and last line
             else if (line.contains("//") || line.contains("}")) {
@@ -57,6 +57,10 @@ public class Filehandler {
         br.close();
 
         return tmpGraph;
+    }
+
+    public void writeFile (String filename) {
+        
     }
 
     private void checkMaxLinesInFile(String filename) throws IOException {

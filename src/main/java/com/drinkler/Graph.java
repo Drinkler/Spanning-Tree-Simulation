@@ -21,6 +21,14 @@ public class Graph {
         this.name = name;
     }
 
+    public HashMap<Node, ArrayList<Link>> getMap() {
+        return map;
+    }
+
+    public void setMap(HashMap<Node, ArrayList<Link>> map) {
+        this.map = map;
+    }
+
     public int getLinkWeight(int nodeId, int nodePairId) {
         return map.get(getNodeById(nodeId)).stream().filter(link -> link.getNodePair().getId() == nodePairId)
                 .map(link -> link.getWeight()).collect(Collectors.toList()).get(0);
@@ -42,8 +50,8 @@ public class Graph {
                 .map(link -> link.getWeight()).collect(Collectors.toList()).get(0);
     }
 
-    public void createNewNode(int id, String name, int weight) {
-        map.put(new Node(id, name, weight), new ArrayList<Link>());
+    public void createNewNode(int id, String name) {
+        map.put(new Node(id, name), new ArrayList<Link>());
     }
 
     public void addLinkToNode(int nodeId, int weightLink, int nodePairId) {

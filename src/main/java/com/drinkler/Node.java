@@ -1,15 +1,19 @@
 package com.drinkler;
 
+import java.util.ArrayList;
+
 public class Node {
 
     private int id;
     private String name;
     private int weight;
+    private Node predecessor;
 
-    public Node(int id, String name, int weight) {
+    public Node(int id, String name) {
         this.id = id;
         this.name = name;
-        this.weight = weight;
+        this.weight = 0;
+        this.predecessor = null;
     }
 
     public int getId() {
@@ -34,6 +38,14 @@ public class Node {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    public Node getPredecessor() {
+        return predecessor;
+    }
+
+    public void setPredecessor(Node predecessor) {
+        this.predecessor = predecessor;
     }
 
 }

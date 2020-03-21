@@ -10,7 +10,7 @@ public class Args {
     @Parameter(names = { "-o", "--output" }, description = "Name of the output file.")
     private String outputFilename = "output.txt";
 
-    @Parameter(names = { "--maxident" }, description = "Max allowed length of a node name.")
+    @Parameter(names = { "--maxident" }, description = "Max allowed  length of a node name.")
     private int maxIdent = 100;
 
     @Parameter(names = { "--maxitems" }, description = "Max allowed lines of the input file.")

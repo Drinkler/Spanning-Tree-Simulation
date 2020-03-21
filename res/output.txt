@@ -1,8 +1,8 @@
 Spanning-Tree of beispiel {
 	D - E;
-	A - B;
-	F - E;
 	E - B;
+	F - E;
 	Root: B;
 	C - D;
+	A - B;
 }

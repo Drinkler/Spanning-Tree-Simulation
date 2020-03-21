@@ -11,7 +11,7 @@ public class Graph {
 
     public Graph(String name) {
         this.name = name;
-        map = new HashMap<Node, ArrayList<Link>>();
+        this.map = new HashMap<Node, ArrayList<Link>>();
     }
 
     public String getName() {

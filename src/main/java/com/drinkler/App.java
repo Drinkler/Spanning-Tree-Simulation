@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import com.beust.jcommander.JCommander;
 
-public final class App {
+public class App {
 
     static private Graph graph;
     static private Filehandler filehandler;

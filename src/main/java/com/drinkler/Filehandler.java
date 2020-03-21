@@ -11,8 +11,6 @@ import java.nio.file.Paths;
 
 public class Filehandler {
 
-    // private int MAX_IDENT = 100; // Max length of the node identifier/name
-
     public Graph readFile(String filename, int maxItems, int maxNodeId, int maxIdent, int maxKosten)
             throws IOException {
 

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Algorithm {
 
-    public void spanningTree(Graph graph) {
-        for (int i = 0; i < 10; i++) {
+    public void spanningTree(Graph graph, int pdu) {
+        for (int i = 0; i < pdu; i++) {
             for (Node node : graph.getMap().keySet()) {
                 ArrayList<Link> links = graph.getMap().get(node);
                 for (int j = 0; j < links.size(); j++) {

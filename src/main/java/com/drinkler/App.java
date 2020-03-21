@@ -2,32 +2,49 @@ package com.drinkler;
 
 import java.io.IOException;
 
+import com.beust.jcommander.JCommander;
+
 public final class App {
 
     static private Graph graph;
     static private Filehandler filehandler;
     static private Algorithm algorithm;
-
-    // TODO : set command line arguments: help, outputfile, inputfile, maxident, maxitems, maxnodeid, maxkosten
+    static private Args arguments;
 
     public static void main(String[] args) {
-        algorithm = new Algorithm();
+
         filehandler = new Filehandler();
+        algorithm = new Algorithm();
+        arguments = new Args();
+
+        handleArguments(args, arguments);
 
         try {
-            graph = filehandler.readFile("graph.txt");
+            graph = filehandler.readFile(arguments.getInputFilename(), arguments.getMaxItems(),
+                    arguments.getMaxNodeId(), arguments.getMaxIdent(), arguments.getMaxKosten());
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        algorithm.spanningTree(graph);
+        algorithm.spanningTree(graph, arguments.getPbu());
 
         outputConsole();
 
         try {
-            filehandler.writeFile(graph, "output.txt");
+            filehandler.writeFile(graph, arguments.getOutputFilename());
         } catch (IOException e) {
             e.printStackTrace();
+        }
+
+    }
+
+    static void handleArguments(String[] args, Args arguments) {
+        JCommander jc = JCommander.newBuilder().addObject(arguments).build();
+        jc.parse(args);
+
+        if (arguments.getHelp()) {
+            jc.usage();
+            System.exit(0);
         }
     }
 

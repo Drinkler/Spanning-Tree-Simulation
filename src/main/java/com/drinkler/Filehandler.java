@@ -11,14 +11,14 @@ import java.nio.file.Paths;
 
 public class Filehandler {
 
-    private int MAX_ITEMS = 100; // The input file can have a max of MAX_ITEMS lines
     // private int MAX_IDENT = 100; // Max length of the node identifier/name
 
-    public Graph readFile(String filename) throws IOException {
+    public Graph readFile(String filename, int maxItems, int maxNodeId, int maxIdent, int maxKosten)
+            throws IOException {
 
         Graph tmpGraph = null;
 
-        checkMaxLinesInFile(filename);
+        checkMaxLinesInFile(filename, maxItems);
 
         File file = new File("res", filename);
         FileReader fr = new FileReader(file);
@@ -31,15 +31,30 @@ public class Filehandler {
 
             // Add Links
             if (line.contains("-")) {
-                tmpGraph.addLinkToNode(splittedLine[0],
-                        Integer.parseInt(splittedLine[4], 0, splittedLine[4].length() - 1, 10), splittedLine[2]);
-                tmpGraph.addLinkToNode(splittedLine[2],
-                        Integer.parseInt(splittedLine[4], 0, splittedLine[4].length() - 1, 10), splittedLine[0]);
+                int weight = Integer.parseInt(splittedLine[4], 0, splittedLine[4].length() - 1, 10);
+                if (weight < 0 || weight > maxKosten) {
+                    System.err.println("Weight of a link exceeds the range of {0, " + maxKosten + "}.");
+                    System.exit(3);
+                }
+
+                tmpGraph.addLinkToNode(splittedLine[0], weight, splittedLine[2]);
+                tmpGraph.addLinkToNode(splittedLine[2], weight, splittedLine[0]);
             }
             // Add Nodes
             else if (line.contains("=")) {
-                tmpGraph.createNewNode(Integer.parseInt(splittedLine[2], 0, splittedLine[2].length() - 1, 10),
-                        splittedLine[0]);
+                int id = Integer.parseInt(splittedLine[2], 0, splittedLine[2].length() - 1, 10);
+                if (id < 1 || id > maxNodeId) {
+                    System.err.println("ID of a node exceeds the range of {1, " + maxNodeId + "}.");
+                    System.exit(5);
+                }
+
+                String name = splittedLine[0];
+                if (maxIdent < 0 || !name.matches("[a-z,A-Z][a-z,A-Z,0-9]{0," + (maxIdent - 1) + "}")) {
+                    System.err.println("Name of a node doesn't matches the requirements.");
+                    System.exit(4);
+                }
+
+                tmpGraph.createNewNode(id, name);
             }
             // Skip comments and last line
             else if (line.contains("//") || line.contains("}")) {
@@ -60,7 +75,7 @@ public class Filehandler {
         return tmpGraph;
     }
 
-    public void writeFile (Graph graph, String filename) throws IOException {
+    public void writeFile(Graph graph, String filename) throws IOException {
         File file = new File("res", filename);
         FileWriter fileWriter = new FileWriter(file);
 
@@ -74,10 +89,10 @@ public class Filehandler {
         fileWriter.close();
     }
 
-    private void checkMaxLinesInFile(String filename) throws IOException {
+    private void checkMaxLinesInFile(String filename, int maxItems) throws IOException {
         Path path = Paths.get("res", filename);
-        if (Files.lines(path).count() > MAX_ITEMS) {
-            System.err.println("The input file exceeds " + MAX_ITEMS + " of lines!");
+        if (Files.lines(path).count() > maxItems) {
+            System.err.println("The input file exceeds the allowed max lines of " + maxItems + "!");
             System.exit(2);
         }
     }

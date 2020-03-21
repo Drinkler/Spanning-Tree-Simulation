@@ -3,13 +3,20 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.drinkler</groupId>
     <artifactId>spanning-tree-simulation</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <properties>
         <maven.compiler.source>12</maven.compiler.source>
         <maven.compiler.target>12</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
+
+        <dependency>
+            <groupId>com.beust</groupId>
+            <artifactId>jcommander</artifactId>
+            <version>1.78</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -17,6 +24,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <build>
         <pluginManagement>
             <plugins>

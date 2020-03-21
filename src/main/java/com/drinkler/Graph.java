@@ -7,10 +7,11 @@ import java.util.stream.Collectors;
 public class Graph {
 
     private String name;
-    private HashMap<Node, ArrayList<Link>> map = new HashMap<Node, ArrayList<Link>>();
+    private HashMap<Node, ArrayList<Link>> map;
 
     public Graph(String name) {
         this.name = name;
+        map = new HashMap<Node, ArrayList<Link>>();
     }
 
     public String getName() {

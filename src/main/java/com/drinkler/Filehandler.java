@@ -3,6 +3,7 @@ package com.drinkler;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,7 +20,7 @@ public class Filehandler {
 
         checkMaxLinesInFile(filename);
 
-        File file = new File("res/" + filename);
+        File file = new File("res", filename);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
 
@@ -59,12 +60,22 @@ public class Filehandler {
         return tmpGraph;
     }
 
-    public void writeFile (String filename) {
-        
+    public void writeFile (Graph graph, String filename) throws IOException {
+        File file = new File("res", filename);
+        FileWriter fileWriter = new FileWriter(file);
+
+        fileWriter.write("Spanning-Tree of " + graph.getName() + " {\n");
+        for (Node node : graph.getMap().keySet()) {
+            fileWriter.append("\t" + ((node.getPredecessor() == null) ? "Root: " + node.getName() + ";\n"
+                    : node.getName() + " - " + node.getPredecessor().getName() + ";\n"));
+        }
+        fileWriter.append("}");
+
+        fileWriter.close();
     }
 
     private void checkMaxLinesInFile(String filename) throws IOException {
-        Path path = Paths.get("res/" + filename);
+        Path path = Paths.get("res", filename);
         if (Files.lines(path).count() > MAX_ITEMS) {
             System.err.println("The input file exceeds " + MAX_ITEMS + " of lines!");
             System.exit(2);

@@ -15,7 +15,7 @@ public final class App {
         filehandler = new Filehandler();
 
         try {
-            graph = filehandler.readFile("graph2.txt");
+            graph = filehandler.readFile("graph.txt");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -23,7 +23,12 @@ public final class App {
         algorithm.spanningTree(graph);
 
         outputConsole();
-        filehandler.writeFile("output.txt");
+
+        try {
+            filehandler.writeFile(graph, "output.txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     static void outputConsole() {

@@ -1,8 +1,10 @@
 # Spanning-Tree-Simulation
 
-University project by Florian Drinkler
+This Project was created by Florian Drinkler. It is for the "Labor Netztechnik" (english: "Laboratory network technology") Lecture, 4th semester.
 
-## <font color="red">IMPORTANT!</font>
+Documentation and Information about the Project can be found [here](doc/) (German). 
+
+## IMPORTANT!
 
 The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version. 
 <br/>Which means the jar File needs to be executed with a Java Version greater or equal than SE 9.
@@ -41,7 +43,9 @@ Usage: <main class> [options]
 
 ## Execute
 
-The jar File can be found in the [release](release/) Folder. The files `graph.txt` and `graph2.txt` are examples for the input files.
+The jar File can be found in the [release](release/) Folder or under [releases](https://github.com/Drinkler/Spanning-Tree-Simulation/releases). The latest release can be found [here](https://github.com/Drinkler/Spanning-Tree-Simulation/releases/latest).
+<br/>
+ The files `graph.txt` and `graph2.txt` are examples for the input files.
 
 ```
 java -jar spanning-tree-simulation-1.1.2.jar [options]

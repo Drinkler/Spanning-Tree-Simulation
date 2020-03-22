@@ -1,8 +1,0 @@
-Spanning-Tree of beispiel {
-	Root: B;
-	A - B;
-	D - E;
-	E - B;
-	C - D;
-	F - E;
-}

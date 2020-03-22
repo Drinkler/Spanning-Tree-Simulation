@@ -25,3 +25,7 @@ buildNumber.properties
 .classpath
 .project
 .vscode/
+
+/graph.txt
+/graph2.txt
+/output.txt

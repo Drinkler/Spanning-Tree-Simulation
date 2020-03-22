@@ -18,7 +18,7 @@ public class Filehandler {
 
         checkMaxLinesInFile(filename, maxItems);
 
-        File file = new File("res", filename);
+        File file = new File(filename);
         FileReader fr = new FileReader(file);
         BufferedReader br = new BufferedReader(fr);
 
@@ -74,7 +74,7 @@ public class Filehandler {
     }
 
     public void writeFile(Graph graph, String filename) throws IOException {
-        File file = new File("res", filename);
+        File file = new File(filename);
         FileWriter fileWriter = new FileWriter(file);
 
         fileWriter.write("Spanning-Tree of " + graph.getName() + " {\n");
@@ -88,7 +88,7 @@ public class Filehandler {
     }
 
     private void checkMaxLinesInFile(String filename, int maxItems) throws IOException {
-        Path path = Paths.get("res", filename);
+        Path path = Paths.get(filename);
         if (Files.lines(path).count() > maxItems) {
             System.err.println("The input file exceeds the allowed max lines of " + maxItems + "!");
             System.exit(2);

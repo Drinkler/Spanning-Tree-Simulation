@@ -8,11 +8,11 @@
 
 This Project was created by Florian Drinkler. It is for the "Labor Netztechnik" (english: "Laboratory network technology") Lecture, 4th semester.
 
-Documentation and Information about the Project can be found [here](doc/) (German). 
+Documentation and Information about the Project can be found [here](doc/) (German).
 
 ## IMPORTANT
 
-The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version. 
+The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version.
 <br/>Which means the jar File needs to be executed with a Java Version greater or equal than SE 9.
 <br/>It was tested with the [Java SE 12](https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html) Version.
 
@@ -51,10 +51,10 @@ Usage: <main class> [options]
 
 The jar File can be found in the [release](release/) Folder or under [releases](https://github.com/Drinkler/Spanning-Tree-Simulation/releases). The latest release can be found [here](https://github.com/Drinkler/Spanning-Tree-Simulation/releases/latest).
 <br/>
- The files `graph.txt` and `graph2.txt` are examples for the input files.
+The files `graph.txt` and `graph2.txt` are examples for the input files.
 
 ```
-java -jar spanning-tree-simulation-1.1.2.jar [options]
+java -jar spanning-tree-simulation-1.1.3.jar [options]
 ```
 
 ## Conventions for the input file
@@ -73,5 +73,7 @@ Graph <mygraphname> {
   <Nodename> - <Nodename> : <Weight of Link>;
 }
 ```
+
 #### Usage of Dependencies
+
 Copyright © 2017 [JCommander](https://github.com/cbeust/jcommander) Dependency. Released under the [Apache License 2.0](https://github.com/cbeust/jcommander/blob/master/license.txt)

@@ -10,7 +10,7 @@ This Project was created by Florian Drinkler. It is for the "Labor Netztechnik" 
 
 Documentation and Information about the Project can be found [here](doc/) (German). 
 
-## IMPORTANT!
+## IMPORTANT
 
 The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version. 
 <br/>Which means the jar File needs to be executed with a Java Version greater or equal than SE 9.
@@ -73,3 +73,5 @@ Graph <mygraphname> {
   <Nodename> - <Nodename> : <Weight of Link>;
 }
 ```
+#### Usage of Dependencies
+Copyright © 2017 [JCommander](https://github.com/cbeust/jcommander) Dependency. Released under the [Apache License 2.0](https://github.com/cbeust/jcommander/blob/master/license.txt)

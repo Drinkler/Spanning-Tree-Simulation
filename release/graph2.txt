@@ -1,0 +1,12 @@
+Graph graph2 {
+    // Node IDs
+    A = 7;
+    B = 3;
+    C = 5;
+    D = 1;
+    // Links mit zugehörigen Kosten
+    A - B : 1;
+    A - D : 5;
+    B - C : 1;
+    C - D : 2;
+}

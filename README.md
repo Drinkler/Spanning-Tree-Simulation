@@ -2,11 +2,11 @@
 
 University project by Florian Drinkler
 
-## WARNING !!
+## <font color="red">IMPORTANT!</font>
 
-Java Version >= 9
-
-Tested with 9 and 12
+The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version. 
+<br/>Which means the jar File needs to be executed with a Java Version greater or equal than SE 9.
+<br/>It was tested with the [Java SE 12](https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html) Version.
 
 ## Command line options
 
@@ -40,8 +40,26 @@ Usage: <main class> [options]
 ```
 
 ## Execute
-The jar File can be found in the "release" Folder.
+
+The jar File can be found in the [release](release/) Folder. The files `graph.txt` and `graph2.txt` are examples for the input files.
 
 ```
-java -jar spanning-tree-simulation-1.0.jar [options]
+java -jar spanning-tree-simulation-1.1.2.jar [options]
+```
+
+## Conventions for the input file
+
+-   It must be a .txt file
+-   Lines with Comments are getting ignored
+-   You must start with the Nodes
+-   The Graph isn't checked for correctness
+
+Example:
+
+```
+Graph <mygraphname> {
+  <Nodename> = <ID of Node>;
+  // Line gets ignored (Comment)
+  <Nodename> - <Nodename> : <Weight of Link>;
+}
 ```

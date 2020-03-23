@@ -1,6 +1,6 @@
 language: java
 jdk: oraclejdk9
 install: true
-script: mvn clean package -DskipTests=true
+script: mvn clean package -DskipTests=true -Dcheckstyle.skip
 after_success:
   - mvn coveralls:report

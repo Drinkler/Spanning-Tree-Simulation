@@ -1,4 +1,6 @@
 language: java
-jdk: oraclejdk12
+jdk: oraclejdk9
+install: true
+script: mvn clean package -DskipTests=true
 after_success:
   - mvn coveralls:report

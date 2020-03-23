@@ -1,4 +1,4 @@
 language: java
-jdk: oraclejdk12
+jdk: oraclejdk9
 after_success:
   - mvn coveralls:report

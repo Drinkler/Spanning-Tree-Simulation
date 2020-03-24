@@ -1,5 +1,3 @@
-
-
 # Spanning-Tree-Simulation :deciduous_tree:
 
 [![GitHub](https://img.shields.io/github/license/drinkler/Spanning-Tree-Simulation?label=license)](https://github.com/Drinkler/Spanning-Tree-Simulation/blob/master/LICENSE)

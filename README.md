@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/issues)
 [![GitHub Release Date](https://img.shields.io/github/release-date/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/releases)
 
-# Spanning-Tree-Simulation
+# Spanning-Tree-Simulation :deciduous_tree:
 
 This Project was created by Florian Drinkler. It is for the "Labor Netztechnik" (english: "Laboratory network technology") Lecture, 4th semester.
 

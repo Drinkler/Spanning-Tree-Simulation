@@ -15,6 +15,8 @@ Documentation and Information about the Project can be found [here](doc/) (Germa
 The Project is compiled with the [Java SE 9](https://www.oracle.com/java/technologies/javase/javase9-archive-downloads.html) Version.
 <br/>Which means the jar File needs to be executed with a Java Version greater or equal than SE 9.
 <br/>It was tested with the [Java SE 12](https://www.oracle.com/java/technologies/javase/jdk12-archive-downloads.html) Version.
+<br/>
+<br/>[JDK Installation Instructions for Windows](https://docs.oracle.com/en/java/javase/12/install/installation-jdk-microsoft-windows-platforms.html#GUID-DAF345BA-B3E7-4CF2-B87A-B6662D691840)
 
 ## Command line options
 

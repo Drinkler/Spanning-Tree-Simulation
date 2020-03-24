@@ -53,7 +53,7 @@ Usage: <main class> [options]
 
 The jar File can be found in the [release](release/) Folder or under [releases](https://github.com/Drinkler/Spanning-Tree-Simulation/releases). The latest release can be found [here](https://github.com/Drinkler/Spanning-Tree-Simulation/releases/latest).
 <br/>
-The files `graph.txt` and `graph2.txt` are examples for the input files.
+The files `graph.txt` and `graph2.txt` are examples for the input file.
 
 ```
 java -jar spanning-tree-simulation-1.1.3.jar [options]

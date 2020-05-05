@@ -44,7 +44,7 @@ public class App {
 
         if (arguments.getHelp()) {
             jc.usage();
-            System.exit(0);
+            Runtime.getRuntime().exit(0);
         }
     }
 

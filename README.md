@@ -5,6 +5,7 @@
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/issues)
 [![GitHub Release Date](https://img.shields.io/github/release-date/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/releases)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5ce4c70928de42dc88b7df2069ba35a9)](https://www.codacy.com/manual/Drinkler/Spanning-Tree-Simulation?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Drinkler/Spanning-Tree-Simulation&amp;utm_campaign=Badge_Grade)
 
 This Project was created by Florian Drinkler. It is for the "Labor Netztechnik" (english: "Laboratory network technology") Lecture, 4th semester.
 

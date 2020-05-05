@@ -32,7 +32,7 @@ public class Filehandler {
                 int weight = Integer.parseInt(splittedLine[4], 0, splittedLine[4].length() - 1, 10);
                 if (weight < 0 || weight > maxKosten) {
                     System.err.println("Weight of a link exceeds the range of {0, " + maxKosten + "}.");
-                    System.exit(3);
+                    Runtime.getRuntime().exit(3);
                 }
 
                 tmpGraph.addLinkToNode(splittedLine[0], weight, splittedLine[2]);
@@ -43,13 +43,13 @@ public class Filehandler {
                 int id = Integer.parseInt(splittedLine[2], 0, splittedLine[2].length() - 1, 10);
                 if (id < 1 || id > maxNodeId) {
                     System.err.println("ID of a node exceeds the range of {1, " + maxNodeId + "}.");
-                    System.exit(5);
+                    Runtime.getRuntime().exit(5);
                 }
 
                 String name = splittedLine[0];
                 if (maxIdent < 0 || !name.matches("[a-z,A-Z][a-z,A-Z,0-9]{0," + (maxIdent - 1) + "}")) {
                     System.err.println("Name of a node doesn't matches the requirements.");
-                    System.exit(4);
+                    Runtime.getRuntime().exit(6);
                 }
 
                 tmpGraph.createNewNode(id, name);
@@ -65,7 +65,7 @@ public class Filehandler {
             // Line layout couldn't be detected
             else {
                 System.err.println("Line could not be detected!");
-                System.exit(1);
+                Runtime.getRuntime().exit(1);
             }
         }
         br.close();
@@ -91,7 +91,7 @@ public class Filehandler {
         Path path = Paths.get(filename);
         if (Files.lines(path).count() > maxItems) {
             System.err.println("The input file exceeds the allowed max lines of " + maxItems + "!");
-            System.exit(2);
+            Runtime.getRuntime().exit(2);
         }
     }
 

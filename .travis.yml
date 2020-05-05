@@ -1,5 +1,4 @@
 language: java
 jdk: oraclejdk9
-script: sudo mvn -c clean package -DskipTests=true
 after_success:
   - mvn coveralls:report

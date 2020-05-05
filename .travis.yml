@@ -1,5 +1,3 @@
 language: java
 jdk: openjdk9
-install: mvn -U clean install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e
-after_success:
-  - mvn coveralls:report
+install: mvn -U clean install -DskipTests=true -Dcheckstyle.skip -Dmaven.javadoc.skip=true -B -V

@@ -1,4 +1,5 @@
 language: java
 jdk: oraclejdk9
+install: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -e
 after_success:
   - mvn coveralls:report

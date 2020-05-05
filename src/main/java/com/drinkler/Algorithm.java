@@ -26,7 +26,8 @@ public class Algorithm {
                         nodePair.setWeight(node.getWeight() + link.getWeight());
                         nodePair.setPredecessor(node);
 
-                    // If the ID is the same but the Weight is bigger from the NodePair, it gets the new Weight
+                        // If the ID is the same but the Weight is bigger from the NodePair, it gets the
+                        // new Weight
                     } else if (node.getId() == nodePair.getId()) {
                         if ((node.getWeight() + link.getWeight()) < nodePair.getWeight()) {
                             nodePair.setWeight(node.getWeight() + link.getWeight());

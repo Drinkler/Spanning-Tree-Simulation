@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.drinkler</groupId>
@@ -26,7 +27,7 @@
     </dependencies>
 
     <build>
-    <!--
+        <!--
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -64,12 +65,12 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.2.0</version>
                 <configuration>
-                <archive>
-                    <manifest>
-                    <addClasspath>true</addClasspath>
-                    <mainClass>com.drinkler.App</mainClass>
-                    </manifest>
-                </archive>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.drinkler.App</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
 
@@ -83,26 +84,26 @@
             </plugin>
 
             <plugin>
-                 <artifactId>maven-assembly-plugin</artifactId>
-                 <executions>
-                     <execution>
-                          <phase>package</phase>
-                          <goals>
-                              <goal>single</goal>
-                          </goals>
-                      </execution>
-                  </executions>
-                  <configuration>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
                     <appendAssemblyId>false</appendAssemblyId>
-                       <archive>
-                           <manifest>
-                                 <mainClass>com.drinkler.App</mainClass>
-                           </manifest>
-                       </archive>
-                       <descriptorRefs>
-                           <descriptorRef>jar-with-dependencies</descriptorRef>
-                      </descriptorRefs>
-                 </configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.drinkler.App</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
             </plugin>
 
 
@@ -191,6 +192,9 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-checkstyle-plugin</artifactId>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
                         <executions>
                             <execution>
                                 <id>checkstyle</id>

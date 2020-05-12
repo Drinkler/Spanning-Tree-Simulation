@@ -1,4 +1,4 @@
-package com.drinkler;
+package com.floriandrinkler;
 
 import java.io.BufferedReader;
 import java.io.File;

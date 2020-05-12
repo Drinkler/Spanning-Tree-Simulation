@@ -1,4 +1,4 @@
-package com.drinkler;
+package com.floriandrinkler;
 
 import java.util.ArrayList;
 import java.util.HashMap;

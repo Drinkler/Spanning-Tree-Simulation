@@ -1,11 +1,11 @@
-package com.drinkler;
+package com.floriandrinkler;
 
 import com.beust.jcommander.Parameter;
 
 public class Args {
 
     @Parameter(names = { "-i", "--input" }, description = "Name of the input file.")
-    private String inputFilename = "graph.txt";
+    private String inputFilename = "graph1.txt";
 
     @Parameter(names = { "-o", "--output" }, description = "Name of the output file.")
     private String outputFilename = "output.txt";

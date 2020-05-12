@@ -1,4 +1,4 @@
-package com.drinkler;
+package com.floriandrinkler;
 
 import java.io.IOException;
 
@@ -40,6 +40,7 @@ public class App {
 
     static void handleArguments(String[] args, Args arguments) {
         JCommander jc = JCommander.newBuilder().addObject(arguments).build();
+        jc.setProgramName("Spanning-Tree-Simulation");
         jc.parse(args);
 
         if (arguments.getHelp()) {

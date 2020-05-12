@@ -1,4 +1,4 @@
-package com.drinkler;
+package com.floriandrinkler;
 
 public class Node {
 

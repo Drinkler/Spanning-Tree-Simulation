@@ -1,4 +1,4 @@
-Graph beispiel {
+Graph graph1 {
     // Node IDs
     A = 5;
     B = 1;

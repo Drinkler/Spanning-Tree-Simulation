@@ -1,0 +1,69 @@
+{
+    "graph": {
+        "name": "graph1"
+    },
+    "nodes": [
+        {
+            "name": "A",
+            "id": 5
+        },
+        {
+            "name": "B",
+            "id": 1
+        },
+        {
+            "name": "C",
+            "id": 3
+        },
+        {
+            "name": "D",
+            "id": 7
+        },
+        {
+            "name": "E",
+            "id": 6
+        },
+        {
+            "name": "F",
+            "id": 4
+        }
+    ],
+    "links": [
+        {
+            "nodes": ["A", "B"],
+            "weight": 10
+        },
+        {
+            "nodes": ["A", "C"],
+            "weight": 10
+        },
+        {
+            "nodes": ["B", "D"],
+            "weight": 15
+        },
+        {
+            "nodes": ["B", "E"],
+            "weight": 10
+        },
+        {
+            "nodes": ["C", "D"],
+            "weight": 3
+        },
+        {
+            "nodes": ["C", "E"],
+            "weight": 10
+        },
+        {
+            "nodes": ["D", "E"],
+            "weight": 2
+        },
+        {
+            "nodes": ["D", "F"],
+            "weight": 10
+        },
+        {
+            "nodes": ["E", "F"],
+            "weight": 2
+        }
+    ]
+}

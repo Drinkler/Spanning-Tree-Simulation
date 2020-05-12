@@ -1,0 +1,41 @@
+{
+    "graph": {
+        "name": "graph2"
+    },
+    "nodes": [
+        {
+            "name": "A",
+            "id": 7
+        },
+        {
+            "name": "B",
+            "id": 3
+        },
+        {
+            "name": "C",
+            "id": 5
+        },
+        {
+            "name": "D",
+            "id": 1
+        }
+    ],
+    "links": [
+        {
+            "nodes": ["A", "B"],
+            "weight": 1
+        },
+        {
+            "nodes": ["A", "D"],
+            "weight": 5
+        },
+        {
+            "nodes": ["B", "C"],
+            "weight": 1
+        },
+        {
+            "nodes": ["C", "D"],
+            "weight": 2
+        }
+    ]
+}

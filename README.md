@@ -1,3 +1,20 @@
+# Spanning-Tree-Lambda
+
+This Repository is a copy of the [Spanning-Tree-Simulation](https://github.com/Drinkler/Spanning-Tree-Simulation) Repository. This Repository is modified for AWS Lambda for use on 
+my personal website [floriandrinkler.com](https://floriandrinkler.com).
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Spanning-Tree-Simulation :deciduous_tree:
 
 [![Build Status](https://travis-ci.com/Drinkler/Spanning-Tree-Simulation.svg?branch=master)](https://travis-ci.com/Drinkler/Spanning-Tree-Simulation)

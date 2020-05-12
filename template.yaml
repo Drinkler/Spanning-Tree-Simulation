@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+Description: An AWS Serverless Specification template describing your function.
+Resources:
+  SpanningTreeSimulation:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Handler: "com.floriandrinkler.LambdaHandler::handleRequest"
+      Runtime: java11
+      CodeUri: .
+      Description: ""
+      MemorySize: 512
+      Timeout: 15
+      Role: >-
+        arn:aws:iam::168876705064:role/service-role/Spanning-Tree-Simulation-role-51kfhqls
+      Events:
+        Api1:
+          Type: Api
+          Properties:
+            Path: /Spanning-Tree-Simulation
+            Method: ANY

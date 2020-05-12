@@ -19,7 +19,7 @@ my personal website [floriandrinkler.com](https://floriandrinkler.com).
 
 [![Build Status](https://travis-ci.com/Drinkler/Spanning-Tree-Simulation.svg?branch=master)](https://travis-ci.com/Drinkler/Spanning-Tree-Simulation)
 [![GitHub](https://img.shields.io/github/license/drinkler/Spanning-Tree-Simulation?label=license)](https://github.com/Drinkler/Spanning-Tree-Simulation/blob/master/LICENSE)
-[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/tree/v1.1.3)
+[![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/tree/v2.0.0)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/issues)
 [![GitHub Release Date](https://img.shields.io/github/release-date/drinkler/Spanning-Tree-Simulation)](https://github.com/Drinkler/Spanning-Tree-Simulation/releases)

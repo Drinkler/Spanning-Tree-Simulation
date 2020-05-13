@@ -4,7 +4,7 @@ import com.beust.jcommander.Parameter;
 
 public class Args {
 
-    @Parameter(names = { "-i", "--input" }, description = "Name of the input file.")
+    @Parameter(names = { "-i", "--input" }, description = "Name of the input file. (.json or .txt files)")
     private String inputFilename = "graph1.txt";
 
     @Parameter(names = { "-o", "--output" }, description = "Name of the output file.")

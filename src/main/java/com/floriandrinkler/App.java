@@ -31,28 +31,7 @@ public class App {
 
         handleArguments(args, arguments);
 
-        // Get file extension of inputfile
-        String[] inputfile = arguments.getInputFilename().split(Pattern.quote("."));
-        String fileExtension = inputfile[inputfile.length - 1];
-
-        if (fileExtension.equals("txt")) {
-            try {
-                graph = filehandler.readFile(arguments.getInputFilename(), arguments.getMaxItems(),
-                        arguments.getMaxNodeId(), arguments.getMaxIdent(), arguments.getMaxKosten());
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else if (fileExtension.equals("json")) {
-            try {
-                graph = jsonHandler.readJson(jsonHandler
-                        .jsonToMap(new JSONObject(new JSONTokener(new FileInputStream(arguments.getInputFilename())))));
-            } catch (JSONException | FileNotFoundException e) {
-                e.printStackTrace();
-            }
-        } else {
-            System.err.println("File extension isn't supported.");
-            Runtime.getRuntime().exit(11);
-        }
+        graph = handleFileExtension(graph, arguments);
 
         algorithm.spanningTree(graph, arguments.getPbu());
 
@@ -84,6 +63,34 @@ public class App {
                     : node.getName() + " - " + node.getPredecessor().getName() + ";");
         }
         System.out.println("}");
+    }
+
+    static Graph handleFileExtension(Graph graph, Args arguments) {
+        // Get file extension of inputfile
+        String[] inputfile = arguments.getInputFilename().split(Pattern.quote("."));
+        String fileExtension = inputfile[inputfile.length - 1];
+
+        // Handle file extension
+        if (fileExtension.equals("txt")) {
+            try {
+                graph = filehandler.readFile(arguments.getInputFilename(), arguments.getMaxItems(),
+                        arguments.getMaxNodeId(), arguments.getMaxIdent(), arguments.getMaxKosten());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else if (fileExtension.equals("json")) {
+            try {
+                graph = jsonHandler.readJson(jsonHandler
+                        .jsonToMap(new JSONObject(new JSONTokener(new FileInputStream(arguments.getInputFilename())))));
+            } catch (JSONException | FileNotFoundException e) {
+                e.printStackTrace();
+            }
+        } else {
+            System.err.println("File extension isn't supported.");
+            Runtime.getRuntime().exit(11);
+        }
+
+        return graph;
     }
 
 }

@@ -3,6 +3,7 @@ os: linux
 
 language: java
 jdk:
+    - openjdk8
     - openjdk9 # minimum Java version
     - openjdk11 # AWS Lambda version
     - openjdk12 # Local debug version
